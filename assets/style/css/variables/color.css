@@ -1,0 +1,38 @@
+:root {
+  /* Brand */
+  --color-brand-01: #1a5cff;
+  --color-brand-02: #040404;
+  --color-brand-03: #eee;
+
+  /* Block Elements */
+  --color-ui-01: #040404;
+  --color-ui-02: #090909;
+  --color-ui-03: #171717;
+  --color-field-01: #282828;
+  --color-skeleton-01: #141414;
+  --color-skeleton-02: #282828;
+
+  /* Borders */
+  --color-border-01: #090909;
+  --color-border-02: #171717;
+  --color-border-03: #202020;
+
+  /* Typographic */
+  --color-text-01: #999;
+  --color-text-02: #666;
+  --color-link-01: #1a5cff;
+  --color-icon-01: #999;
+
+  /* Interactive */
+  --color-hover-01: #202020;
+  --color-hover-02: #090909;
+
+  /* Denotative */
+  --color-danger-01: #fd0000;
+  --color-warning-01: #fff14b;
+  --color-success-01: #25d366;
+  --color-info-01: #5dc3e9;
+
+  /* Overlays */
+  --color-overlay-01: rgba(0, 0, 0, 0.1);
+}

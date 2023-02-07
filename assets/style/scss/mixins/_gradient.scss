@@ -1,0 +1,15 @@
+@mixin transparent-gradient-to-top($color, $color-intensity) {
+  background: linear-gradient(to top, $color, $color-intensity, transparent);
+}
+
+@mixin transparent-gradient-to-bottom($color, $color-intensity) {
+  background: linear-gradient(to bottom, $color, $color-intensity, transparent);
+}
+
+@mixin transparent-gradient-to-right($color, $color-intensity) {
+  background: linear-gradient(to right, $color, $color-intensity, transparent);
+}
+
+@mixin transparent-gradient-to-left($color, $color-intensity) {
+  background: linear-gradient(to left, $color, $color-intensity, transparent);
+}
