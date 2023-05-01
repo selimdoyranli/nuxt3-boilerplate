@@ -1,14 +1,30 @@
-import viteEslint from 'vite-plugin-eslint'
-import viteStylelint from 'vite-plugin-stylelint'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir: '',
   /*
    ** Global Styles (Actual styles)
    */
   css: [
     // Actual styles entry point (as import management)
     '~/assets/style/scss/app.scss'
+  ],
+
+  modules: [
+    [
+      '@nuxtjs/eslint-module',
+      {
+        // eslint module options
+      }
+    ],
+    // https://github.com/nuxt-community/stylelint-module
+    [
+      '@nuxtjs/stylelint-module',
+      {
+        cache: false,
+        lintOnStart: false,
+        include: ['./{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}']
+      }
+    ]
   ],
 
   vite: {
@@ -27,13 +43,6 @@ export default defineNuxtConfig({
               `
         }
       }
-    },
-    plugins: [
-      viteEslint(),
-      viteStylelint({
-        cache: false,
-        include: ['./{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus}', '*.vue', '**/*.vue']
-      })
-    ]
+    }
   }
 })

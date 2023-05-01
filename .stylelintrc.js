@@ -1,23 +1,19 @@
 module.exports = {
   extends: [
-    // https://github.com/stylelint/stylelint-config-standard
-    'stylelint-config-standard-scss',
-    // https://github.com/ota-meshi/stylelint-config-recommended-vue
-    'stylelint-config-recommended-vue/scss',
-    //https://github.com/constverum/stylelint-config-rational-order
+    // https://github.com/constverum/stylelint-config-rational-order
     'stylelint-config-rational-order',
     // https://github.com/shannonmoeller/stylelint-config-prettier
     'stylelint-config-prettier'
   ],
-  'overrides': [
+  overrides: [
     {
-      'customSyntax': 'postcss-scss',
-      files: ['./{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus}'],
+      customSyntax: 'postcss-scss',
+      files: ['./src/{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus}']
     },
     {
-      'customSyntax': 'postcss-html',
-      files: ['*.vue', '**/*.vue'],
-    },
+      customSyntax: 'postcss-html',
+      files: ['./src/*.vue', './src/**/*.vue']
+    }
   ],
   plugins: [
     // https://github.com/kristerkari/stylelint-scss#list-of-rules
@@ -34,6 +30,7 @@ module.exports = {
       }
     ],
     'color-named': 'never',
+    'color-function-notation': 'legacy',
     'at-rule-no-unknown': null,
     'declaration-empty-line-before': [
       'always',
