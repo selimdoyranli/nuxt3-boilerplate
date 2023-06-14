@@ -1,6 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: '',
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        /*
+         ** Global Styles (Do not import actual styles)
+         */
+        scss: {
+          additionalData: `
+                @import "@/assets/style/scss/functions/_center.scss";
+                @import "@/assets/style/scss/functions/_triangle.scss";
+                @import "@/assets/style/scss/mixins/_font.scss";
+                @import "@/assets/style/scss/mixins/_gradient.scss";
+              `
+        }
+      }
+    }
+  },
+
   /*
    ** Global Styles (Actual styles)
    */
@@ -20,29 +39,8 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/stylelint-module',
       {
-        cache: false,
-        lintOnStart: false,
-        include: ['./{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}']
+        include: './src/{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}'
       }
     ]
-  ],
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        /*
-         ** Global Styles (Do not import actual styles)
-         ** https://www.npmjs.com/package/@nuxtjs/style-resources
-         */
-        scss: {
-          additionalData: `
-                @import "@/assets/style/scss/functions/_center.scss";
-                @import "@/assets/style/scss/functions/_triangle.scss";
-                @import "@/assets/style/scss/mixins/_font.scss";
-                @import "@/assets/style/scss/mixins/_gradient.scss";
-              `
-        }
-      }
-    }
-  }
+  ]
 })
