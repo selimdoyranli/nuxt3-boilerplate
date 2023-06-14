@@ -1,9 +1,7 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
+  "extends": "./src/.nuxt/tsconfig.json",
   "vueCompilerOptions": {
-    "plugins": [
-      "@volar/vue-language-plugin-pug"
-    ]
+    "plugins": ["@volar/vue-language-plugin-pug"]
   }
 }

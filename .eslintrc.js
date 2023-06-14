@@ -12,15 +12,12 @@ module.exports = {
     ecmaFeatures: {
       legacyDecorators: true
     },
-    warnOnUnsupportedTypeScriptVersion: false
+    warnOnUnsupportedTypeScriptVersion: false,
+    templateTokenizer: {
+      pug: 'vue-eslint-parser-template-tokenizer-pug'
+    }
   },
-  extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:vue/strongly-recommended',
-    'plugin:nuxt/recommended',
-    'eslint-config-prettier',
-    'prettier'
-  ],
+  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/strongly-recommended', 'eslint-config-prettier', 'prettier'],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
@@ -41,31 +38,47 @@ module.exports = {
     'no-multiple-empty-lines': [2, { max: 2 }],
     semi: ['error', 'never'],
     'arrow-parens': ['error', 'as-needed'],
-    camelcase: 'off',
-    'vue/component-definition-name-casing': ['error', 'PascalCase'],
-    'vue/multi-word-component-names': 'off',
     'no-extend-native': 'off',
     'space-before-function-paren': 'off',
+    camelcase: 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-throw-literal': 'off',
     'no-param-reassign': [
       'error',
       {
         props: false
       }
     ],
-    'vue/html-self-closing': [
+    '@typescript-eslint/no-var-requires': 'off',
+    'vue/component-definition-name-casing': ['error', 'PascalCase'],
+    'vue/multi-word-component-names': 'off',
+    'vue/component-tags-order': ['error', { order: ['template', 'script', 'style', 'docs'] }],
+    'vue/padding-line-between-blocks': ['error'],
+    'vue/block-lang': [
       'error',
       {
-        html: {
-          void: 'any',
-          normal: 'always',
-          component: 'always'
+        script: {
+          lang: 'ts'
         },
-        svg: 'always',
-        math: 'always'
+        style: {
+          lang: 'scss'
+        }
       }
     ],
+    'vue/no-empty-component-block': ['error'],
+    'vue/no-static-inline-styles': [
+      'error',
+      {
+        allowBinding: false
+      }
+    ],
+    'vue/require-prop-types': ['error'],
+    'vue/require-default-prop': ['error'],
+    'vue/attribute-hyphenation': ['error', 'always'],
+    'vue/v-on-event-hyphenation': ['error', 'always'],
+    'vue/html-self-closing': 'off',
+    'vue/no-v-html': 'off',
     'vue/order-in-components': ['error'],
     'padding-line-between-statements': [
       'error',
