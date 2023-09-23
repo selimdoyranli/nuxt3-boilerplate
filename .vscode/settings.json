@@ -1,10 +1,6 @@
 {
   "emmet.showAbbreviationSuggestions": true,
   "emmet.showExpandedAbbreviation": "always",
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "vue": "jade"
-  },
   "files.insertFinalNewline": true,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
