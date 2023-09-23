@@ -2282,7 +2282,7 @@
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz#98b99425edee70b4c992692628fa1ea2c1e57d07"
   integrity sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==
 
-"@vue/language-plugin-pug@''1.8.13":
+"@vue/language-plugin-pug@^1.8.13":
   version "1.8.13"
   resolved "https://registry.yarnpkg.com/@vue/language-plugin-pug/-/language-plugin-pug-1.8.13.tgz#fd4c0b76aabce1b835e5eefe676294bdb1e80ca5"
   integrity sha512-rA4VSock+Ncpmfc1/1QYuMMd0teTkicGLZnYtF7Ax+iVPIDjBrKTu66Q0SzwhJu2lYdRg8JI/IF6R+pFtJeRzg==
@@ -7388,7 +7388,7 @@ nuxi@^3.8.3:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt@''3.7.3:
+nuxt@^3.7.3:
   version "3.7.3"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.7.3.tgz#ca23819ac53dc51e896703c171d5aacb1ef60326"
   integrity sha512-fh3l3PhL79pHJckHVGebTFYlqXDq1jHAXUcNmS3RTfmJRb1s4qi5kSRgmYUWEI5I4Iu+S0u8wWh2ChvnZMQRog==
