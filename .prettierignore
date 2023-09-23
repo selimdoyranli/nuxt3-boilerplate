@@ -1,6 +1,7 @@
 .nuxt/
 .nuxt-storybook
 dist
+.output
 src/static
 src/public
 coverage
