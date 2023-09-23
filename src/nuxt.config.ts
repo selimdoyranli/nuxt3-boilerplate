@@ -42,5 +42,16 @@ export default defineNuxtConfig({
         include: './src/{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}'
       }
     ]
-  ]
+  ],
+
+  /**
+   * PostCSS config
+   */
+  postcss: {
+    plugins: {
+      autoprefixer: {
+        grid: true
+      }
+    }
+  }
 })
