@@ -64,6 +64,7 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^6.0.2",
     "stylelint-scss": "^4.4.0",
+    "volar-service-vetur": "^0.0.13",
     "vue-eslint-parser": "^9.3.1",
     "vue-eslint-parser-template-tokenizer-pug": "^0.4.10"
   },

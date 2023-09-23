@@ -1,5 +1,6 @@
 const vetur = require('@volar-plugins/vetur')
 
 module.exports = {
-  plugins: [vetur()]
+  plugins: [vetur()],
+  services: [require('volar-service-vetur').create()]
 }
