@@ -1,5 +1,25 @@
 {
+  "name": "nuxt3-boilerplate",
+  "version": "0.0.1",
+  "description": "💚 Stable, compatible, powerful, clear, production ready 📦👌",
   "private": true,
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxt boilerplate",
+    "nuxt3 boilerplate"
+  ],
+  "author": "selimdoyranli",
+  "contributors": [
+    "Selim Doyranlı <selimdoyranli@gmail.com> (https://selimdoyranli.com)"
+  ],
+  "bugs": "selimdoyranli@gmail.com",
+  "homepage": "https://github.com/selimdoyranli/nuxt3-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selimdoyranli/nuxt3-boilerplate"
+  },
+  "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
   },

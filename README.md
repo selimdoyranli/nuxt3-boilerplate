@@ -1,42 +1,122 @@
-# Nuxt 3 Minimal Starter
+<br>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center">
+<b>nuxt3-boilerplate</b>
+</p>
 
-## Setup
+<p align="center">
+💚 Stable, compatible, powerful, clear, production ready 📦👌
+</p>
 
-Make sure to install the dependencies:
+<p align="center">
+<a href="https://github.com/selimdoyranli/nuxt3-boilerplate" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/selimdoyranli/nuxt3-boilerplate?style=social"></a>
+</p>
 
-```bash
-# yarn
-yarn install
+<div align="center">
+<sub>Buy me a coffee - <a href="https://www.buymeacoffee.com/selimdoyranli">Sponsorship 💖</a></sub><br>
+</div>
 
-# npm
-npm install
+## Getting Started
 
-# pnpm
-pnpm install
-```
+### Init Project Locally
 
-## Development Server
+Install [Node.js >=18.0.0](https://nodejs.org/) and run the following command:
 
-Start the development server on http://localhost:3000
+&nbsp;
 
-```bash
-npm run dev
-```
+#### Installation
 
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
+Git clone.
 
 ```bash
-npm run preview
+$ git clone https://github.com/selimdoyranli/nuxt3-boilerplate.git
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+&nbsp;
+
+#### Build Setup
+
+```bash
+$ cd nuxt3-boilerplate
+
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# generate static project
+$ yarn generate
+
+# serve production mode (Server target)
+$ yarn start
+
+# serve production mode (Static target)
+$ yarn preview
+
+```
+
+#### Linter
+
+```bash
+# run eslint for js & vue files
+$ yarn lint:eslint
+
+# run eslint fix for js & vue files
+$ yarn lint:eslint:fix
+
+# run stylelint for vue & style files
+$ yarn lint:stylelint
+
+# run stylelint fix for vue & style files
+$ yarn lint:stylelint:fix
+
+# run prettier
+$ yarn prettier
+
+```
+
+#### Git
+
+```bash
+# add files
+$ git add .
+
+# generate commit message
+$ yarn cz # or 'yarn commit'
+
+# push
+$ git push
+
+```
+
+---
+
+## Tech Stack
+
+- [Nuxt](https://nuxtjs.org) - Nuxt3 vue framework
+- Pug
+- Scss
+- Typescript
+- Husky
+- Eslint
+- Stylelint
+- Prettier
+- Conventional Commit
+- Commitlint
+- Commitizen
+- Volar
+
+## Sponsorship
+
+You can sponsor me for the continuity of my projects:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/selimdoyranli">
+    <img src='https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png'/>
+  </a>
+</p>
+
+## License
+
+MIT License © 2023 [selimdoyranli](https://github.com/selimdoyranli)
