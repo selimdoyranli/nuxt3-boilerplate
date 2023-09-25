@@ -1,0 +1,13 @@
+.corporate-layout {
+  $layout: '.layout';
+
+  position: relative;
+
+  #{$layout} {
+    &__inner {
+      display: grid;
+      text-align: center;
+      place-items: center;
+    }
+  }
+}

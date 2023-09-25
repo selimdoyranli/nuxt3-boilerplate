@@ -1,7 +1,47 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // https://nuxt.com/docs/api/configuration/nuxt-config#srcdir
   srcDir: '',
 
+  /**
+   * SSR
+   * https://nuxt.com/docs/api/configuration/nuxt-config#ssr
+   */
+  ssr: true,
+
+  /**
+   * App Config
+   */
+  app: {
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  /**
+   * Auto import components
+   * https://nuxt.com/docs/api/configuration/nuxt-config#components
+   */
+  components: [
+    {
+      path: '@/components',
+      pathPrefix: false,
+      extensions: ['vue'],
+      extendComponent(component) {
+        /**
+         * Remove 'Component' suffix for generated component names
+         * e.g.
+         *  components/Xyz.component.vue
+         *    XyzComponent -> Xyz
+         */
+        component.pascalName = component.pascalName.replace('Component', '')
+        component.kebabName = component.kebabName.replace('component', '')
+      }
+    }
+  ],
+
+  /**
+   * Vite config
+   */
   vite: {
     css: {
       preprocessorOptions: {
@@ -24,10 +64,24 @@ export default defineNuxtConfig({
    ** Global Styles (Actual styles)
    */
   css: [
-    // Actual styles entry point (as import management)
-    '~/assets/style/scss/app.scss'
+    // Actual styles entry point
+    '@/assets/style/scss/app.scss'
   ],
 
+  /**
+   * PostCSS config
+   */
+  postcss: {
+    plugins: {
+      autoprefixer: {
+        grid: true
+      }
+    }
+  },
+
+  /**
+   * Modules
+   */
   modules: [
     [
       '@nuxtjs/eslint-module',
@@ -45,13 +99,28 @@ export default defineNuxtConfig({
   ],
 
   /**
-   * PostCSS config
+   * Hooks
    */
-  postcss: {
-    plugins: {
-      autoprefixer: {
-        grid: true
-      }
+  hooks: {
+    'pages:extend'(routes) {
+      routes.push(
+        {
+          name: 'index',
+          path: '/',
+          file: '@/pages/Home/Home.page.vue'
+        },
+        {
+          path: '/about',
+          file: '@/pages/About/About.page.vue'
+        }
+      )
     }
+  },
+
+  /**
+   * Experimental options
+   */
+  experimental: {
+    typedPages: true
   }
 })

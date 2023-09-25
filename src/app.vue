@@ -1,12 +1,5 @@
 <template lang="pug">
 #app
-  Hello
-  // NuxtWelcome
+  NuxtLayout
+    NuxtPage
 </template>
-
-<style lang="scss">
-#app {
-  position: relative;
-  display: block;
-}
-</style>

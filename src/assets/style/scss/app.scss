@@ -1,29 +1,26 @@
-// Variables
-@import '../css/variables/color.css';
-@import '../css/variables/font-size.css';
-@import '../css/variables/border-radius.css';
-@import '../css/variables/box-shadow.css';
-@import '../css/variables/z-index.css';
-@import '../css/variables/header.css';
+// Tokens
+@import '../css/tokens/color.css';
+@import '../css/tokens/box-shadow.css';
+@import '../css/tokens/z-index.css';
+@import '../css/tokens/header.css';
 
-/*
- * Overrides
- */
+// Overrides
 // Overrides put here (e.g. bootstrap grid override, lib ui overrides)
+// ->
 
-/*
- * Vendor
- */
+// Vendor
 // Vendor put here (e.g. animate.css, normalize.css)
+@import '../css/vendor/animate.min.css';
 
 // Base
 @import 'base/general';
+@import 'base/transition';
 
 // Utils
 @import 'utils/state';
-@import 'utils/color';
 
-// Shared (elements with common/shared style classes)
+// Shared
+// Shared styles for UI Blocks
+// Such as 'page', 'card', 'form' that contain common styles
 @import 'shared/page';
 @import 'shared/layout';
-@import 'shared/transition';

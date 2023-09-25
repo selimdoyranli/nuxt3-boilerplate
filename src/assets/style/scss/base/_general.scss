@@ -1,24 +1,27 @@
 @charset "UTF-8";
 
-* {
-  box-sizing: border-box;
-}
-
 ::selection {
   color: #fff;
   background: #444;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   overflow-x: hidden;
-  overflow-y: auto;
-  font-size: 100%;
+  overflow-y: scroll;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: clip;
-  color: var(--color-text-02);
   background-color: var(--color-ui-01);
+
+  @include font-family-system;
+  @include font-weight-regular;
 }

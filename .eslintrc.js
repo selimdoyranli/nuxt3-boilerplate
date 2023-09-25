@@ -17,7 +17,7 @@ module.exports = {
       pug: 'vue-eslint-parser-template-tokenizer-pug'
     }
   },
-  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/strongly-recommended', 'eslint-config-prettier', 'prettier'],
+  extends: ['@nuxt/eslint-config', 'eslint-config-prettier', 'prettier'],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
@@ -52,6 +52,14 @@ module.exports = {
     ],
     '@typescript-eslint/no-var-requires': 'off',
     'vue/component-definition-name-casing': ['error', 'PascalCase'],
+    'vue/component-name-in-template-casing': [
+      'error',
+      'PascalCase',
+      {
+        registeredComponentsOnly: false,
+        ignores: []
+      }
+    ],
     'vue/multi-word-component-names': 'off',
     'vue/component-tags-order': ['error', { order: ['template', 'script', 'style', 'docs'] }],
     'vue/padding-line-between-blocks': ['error'],
