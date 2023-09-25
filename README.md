@@ -97,7 +97,7 @@ $ git push
 
 ## Tech Stack
 
-- [Nuxt](https://nuxtjs.org) - Nuxt3 vue framework
+- [Nuxt](https://nuxt.com) - Nuxt3 vue framework
 - Pug
 - Scss
 - Typescript
