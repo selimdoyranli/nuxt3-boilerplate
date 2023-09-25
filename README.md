@@ -45,11 +45,14 @@ $ yarn install
 # serve with hot reload at localhost:3000
 $ yarn dev
 
-# generate static project
-$ yarn generate
+# build server target project
+$ yarn build
 
 # serve production mode (Server target)
 $ yarn start
+
+# generate static project
+$ yarn generate
 
 # serve production mode (Static target)
 $ yarn preview
