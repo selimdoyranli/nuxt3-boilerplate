@@ -20,8 +20,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: clip;
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-system);
   background-color: var(--color-ui-01);
-
-  @include font-family-system;
-  @include font-weight-regular;
 }

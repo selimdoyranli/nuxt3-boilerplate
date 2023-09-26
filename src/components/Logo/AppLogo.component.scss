@@ -1,5 +1,4 @@
 .app-logo {
   position: relative;
-
-  @include font-weight-bold;
+  font-weight: var(--font-weight-bold);
 }

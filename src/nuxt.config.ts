@@ -70,7 +70,6 @@ export default defineNuxtConfig({
           additionalData: `
                 @import "@/assets/style/scss/functions/_center.scss";
                 @import "@/assets/style/scss/functions/_triangle.scss";
-                @import "@/assets/style/scss/mixins/_font.scss";
                 @import "@/assets/style/scss/mixins/_gradient.scss";
               `
         }

@@ -1,14 +1,21 @@
+@use '../tokens/font-family' as font-family;
 @use '../tokens/font-size' as font-size;
 @use '../tokens/font-weight' as font-weight;
 
+@each $name, $value in font-family.$font-families {
+  .font-family-#{$name} {
+    font-family: var(--font-family-#{$name}) !important;
+  }
+}
+
 @each $name, $value in font-size.$sizes {
-  .text-#{$name} {
+  .font-size-#{$name} {
     font-size: var(--font-size-#{$name}) !important;
   }
 }
 
 @each $name, $value in font-weight.$weights {
-  .text-#{$name} {
+  .font-weight-#{$name} {
     font-weight: var(--font-weight-#{$name}) !important;
   }
 }
