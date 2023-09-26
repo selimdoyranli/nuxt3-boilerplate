@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   // https://nuxt.com/docs/api/configuration/nuxt-config#srcdir
   srcDir: '',
 
@@ -99,17 +101,20 @@ export default defineNuxtConfig({
    * Modules
    */
   modules: [
-    [
-      '@nuxtjs/eslint-module',
-      {
-        // eslint module options
-      }
-    ],
+    // https://github.com/nuxt-community/eslint-module
+    ['@nuxtjs/eslint-module', {}],
     // https://github.com/nuxt-community/stylelint-module
     [
       '@nuxtjs/stylelint-module',
       {
         include: './src/{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}'
+      }
+    ],
+    // https://pinia.vuejs.org
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate']
       }
     ]
   ],
@@ -131,6 +136,10 @@ export default defineNuxtConfig({
         }
       )
     }
+  },
+
+  imports: {
+    dirs: ['./stores']
   },
 
   /**

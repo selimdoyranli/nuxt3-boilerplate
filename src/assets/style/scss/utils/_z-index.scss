@@ -1,0 +1,7 @@
+@use '../tokens/z-index' as z-index;
+
+@each $name, $value in z-index.$z-indexes {
+  .z-index-#{$name} {
+    z-index: var(--z-index-#{$name}) !important;
+  }
+}

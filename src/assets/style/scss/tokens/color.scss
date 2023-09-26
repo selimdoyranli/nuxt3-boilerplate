@@ -1,0 +1,72 @@
+$colors: (
+  'brand': (
+    '01': #000,
+    '02': #454545,
+    '03': #eee
+  ),
+  'ui': (
+    '01': #f2f2f2,
+    '02': #fff,
+    '03': #f8f8f8
+  ),
+  'field': (
+    '01': #eee,
+    '02': #ddd
+  ),
+  'skeleton': (
+    '01': #eee,
+    '02': #ddd
+  ),
+  'border': (
+    '01': #ededed,
+    '02': #ccc
+  ),
+  'text': (
+    '01': #000,
+    '02': #444,
+    '03': #888
+  ),
+  'link': (
+    '01': #3f5894
+  ),
+  'icon': (
+    '01': #aaa
+  ),
+  'hover': (
+    '01': #fafafa,
+    '02': #fff
+  ),
+  'active': (
+    '01': #ededed
+  ),
+  'selected': (
+    '01': #007194
+  ),
+  'disabled': (
+    '01': #c4c4c4
+  ),
+  'danger': (
+    '01': #fd0000
+  ),
+  'warning': (
+    '01': #fff14b
+  ),
+  'success': (
+    '01': #25d366
+  ),
+  'info': (
+    '01': #5dc3e9
+  ),
+  'overlay': (
+    '01': rgba(0, 0, 0, 0.1),
+    '02': rgba(255, 255, 255, 0.9)
+  )
+);
+
+:root {
+  @each $name, $values in $colors {
+    @each $index, $color in $values {
+      --color-#{$name}-#{$index}: #{$color};
+    }
+  }
+}

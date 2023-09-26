@@ -1,0 +1,21 @@
+@use '../tokens/color' as color;
+
+@each $name, $values in color.$colors {
+  @each $index, $color in $values {
+    .color-text-#{$name}-#{$index} {
+      color: var(--color-#{$name}-#{$index}) !important;
+    }
+
+    .dark:color-text-#{$name}-#{$index} {
+      @at-root html[class='dark'] {
+        .color-text-#{$name}-#{$index} {
+          color: var(--color-#{$name}-#{$index}) !important;
+        }
+      }
+    }
+
+    .color-bg-#{$name}-#{$index} {
+      background-color: var(--color-#{$name}-#{$index}) !important;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 // Tokens
-@import '../css/tokens/color.css';
-@import '../css/tokens/box-shadow.css';
-@import '../css/tokens/z-index.css';
-@import '../css/tokens/header.css';
+@import 'tokens/spacer';
+@import 'tokens/font-size';
+@import 'tokens/color';
+@import 'tokens/box-shadow';
+@import 'tokens/z-index';
+@import 'tokens/header';
 
 // Overrides
 // Overrides put here (e.g. bootstrap grid override, lib ui overrides)
@@ -17,6 +19,10 @@
 @import 'base/transition';
 
 // Utils
+@import 'utils/typography';
+@import 'utils/color';
+@import 'utils/box-shadow';
+@import 'utils/z-index';
 @import 'utils/state';
 
 // Shared

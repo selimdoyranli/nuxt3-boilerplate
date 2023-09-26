@@ -1,0 +1,14 @@
+@use '../tokens/font-size' as font-size;
+@use '../tokens/font-weight' as font-weight;
+
+@each $name, $value in font-size.$sizes {
+  .text-#{$name} {
+    font-size: var(--font-size-#{$name}) !important;
+  }
+}
+
+@each $name, $value in font-weight.$weights {
+  .text-#{$name} {
+    font-weight: var(--font-weight-#{$name}) !important;
+  }
+}

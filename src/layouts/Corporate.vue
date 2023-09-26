@@ -1,5 +1,8 @@
 <template lang="pug">
 .layout.corporate-layout
+  // App Preloader
+  AppPreloader
+
   // App Header
   AppHeader
 

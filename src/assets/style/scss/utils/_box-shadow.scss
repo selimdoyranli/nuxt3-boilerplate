@@ -1,0 +1,7 @@
+@use '../tokens/box-shadow' as box-shadow;
+
+@each $index, $value in box-shadow.$box-shadows {
+  .box-shadow-#{$index} {
+    box-shadow: var(--box-shadow-#{$index}) !important;
+  }
+}
