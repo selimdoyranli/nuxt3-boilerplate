@@ -7,3 +7,7 @@ export const usePreloaderStore = defineStore('preloader', {
   actions,
   getters
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(usePreloaderStore, import.meta.hot))
+}

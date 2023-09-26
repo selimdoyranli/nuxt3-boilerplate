@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import { usePreloaderStore } from '@/stores/preloader'
 const preloaderStore = usePreloaderStore()
 
 onMounted(async () => {
