@@ -16,6 +16,7 @@
 
   &__title {
     display: block;
+    font-weight: var(--font-weight-bold);
     font-size: var(--font-size-h4);
     margin-block-start: calc(var(--spacer) * 4);
   }
