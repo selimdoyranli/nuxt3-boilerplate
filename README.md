@@ -109,6 +109,7 @@ $ git push
 - Conventional Commit
 - Commitlint
 - Commitizen
+- [Changelogen](https://github.com/unjs/changelogen) - Release management
 - Volar
 
 ## Sponsorship
