@@ -101,6 +101,7 @@ $ git push
 - Pug
 - Scss
 - Typescript
+- [Pinia](https://pinia.vuejs.org) - State management
 - Husky
 - Eslint
 - Stylelint
