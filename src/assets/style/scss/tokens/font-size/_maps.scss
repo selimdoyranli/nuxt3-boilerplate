@@ -12,9 +12,3 @@ $sizes: (
   '5xl': 3,
   '6xl': 4
 );
-
-:root {
-  @each $name, $multiplier in $sizes {
-    --font-size-#{$name}: #{$base-font-size * $multiplier}px;
-  }
-}

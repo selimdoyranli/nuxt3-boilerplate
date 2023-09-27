@@ -1,9 +1,0 @@
-$box-shadows: (
-  '01': 0 5px 30px rgba(156, 160, 171, 0.25)
-);
-
-:root {
-  @each $index, $value in $box-shadows {
-    --box-shadow-#{$index}: #{$value};
-  }
-}

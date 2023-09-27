@@ -1,14 +1,16 @@
 // Tokens
-@import 'tokens/spacer';
-@import 'tokens/font-family';
-@import 'tokens/font-size';
-@import 'tokens/color';
-@import 'tokens/box-shadow';
-@import 'tokens/z-index';
-@import 'tokens/header';
+@import 'tokens/breakpoint/css-vars';
+@import 'tokens/spacer/css-vars';
+@import 'tokens/font-family/css-vars';
+@import 'tokens/font-size/css-vars';
+@import 'tokens/font-weight/css-vars';
+@import 'tokens/color/css-vars';
+@import 'tokens/box-shadow/css-vars';
+@import 'tokens/z-index/css-vars';
+@import 'tokens/header/css-vars';
 
 // Overrides
-// Overrides put here (e.g. bootstrap grid override, lib ui overrides)
+// Overrides put here for actual styles
 // ->
 
 // Vendor

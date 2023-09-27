@@ -1,6 +1,6 @@
-@use '../tokens/font-family' as font-family;
-@use '../tokens/font-size' as font-size;
-@use '../tokens/font-weight' as font-weight;
+@use '../tokens/font-family/maps' as font-family;
+@use '../tokens/font-size/maps' as font-size;
+@use '../tokens/font-weight/maps' as font-weight;
 
 @each $name, $value in font-family.$font-families {
   .font-family-#{$name} {

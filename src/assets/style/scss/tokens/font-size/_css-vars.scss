@@ -1,0 +1,7 @@
+@use './maps' as font-size;
+
+:root {
+  @each $name, $multiplier in font-size.$sizes {
+    --font-size-#{$name}: #{font-size.$base-font-size * $multiplier}px;
+  }
+}

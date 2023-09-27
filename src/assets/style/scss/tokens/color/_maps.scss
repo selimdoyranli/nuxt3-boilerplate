@@ -62,11 +62,3 @@ $colors: (
     '02': rgba(255, 255, 255, 0.9)
   )
 );
-
-:root {
-  @each $name, $values in $colors {
-    @each $index, $color in $values {
-      --color-#{$name}-#{$index}: #{$color};
-    }
-  }
-}

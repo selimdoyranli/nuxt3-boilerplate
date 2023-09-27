@@ -1,4 +1,4 @@
-@use '../tokens/box-shadow' as box-shadow;
+@use '../tokens/box-shadow/maps' as box-shadow;
 
 @each $index, $value in box-shadow.$box-shadows {
   .box-shadow-#{$index} {

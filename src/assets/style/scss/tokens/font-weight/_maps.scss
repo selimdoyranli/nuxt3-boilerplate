@@ -9,9 +9,3 @@ $weights: (
   'extra-bold': 800,
   'black': 900
 );
-
-:root {
-  @each $name, $value in $weights {
-    --font-weight-#{$name}: #{$value};
-  }
-}
