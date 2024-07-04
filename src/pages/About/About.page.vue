@@ -24,3 +24,5 @@ const navigation = ref<AboutNavigationTypes>({
   link: '/'
 })
 </script>
+
+<style lang="scss" src="./About.page.scss"></style>

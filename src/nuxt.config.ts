@@ -101,11 +101,17 @@ export default defineNuxtConfig({
    */
   modules: [
     // https://github.com/nuxt-community/eslint-module
-    ['@nuxtjs/eslint-module', {}],
+    [
+      '@nuxtjs/eslint-module',
+      {
+        lintOnStart: false
+      }
+    ],
     // https://github.com/nuxt-community/stylelint-module
     [
       '@nuxtjs/stylelint-module',
       {
+        lintOnStart: false,
         include: './src/{assets/style,components,layouts,pages}/**/*.{css,sass,scss,less,stylus,vue}'
       }
     ],
@@ -122,8 +128,8 @@ export default defineNuxtConfig({
    * Hooks
    */
   hooks: {
-    'pages:extend'(routes) {
-      routes.push(
+    'pages:extend'(pages) {
+      pages.push(
         {
           name: 'index',
           path: '/',
@@ -134,9 +140,16 @@ export default defineNuxtConfig({
           file: '@/pages/About/About.page.vue'
         }
       )
+
+      const vueOnlyPages = pages.filter(page => page.file?.endsWith('.vue'))
+
+      pages.splice(0, pages.length, ...vueOnlyPages)
     }
   },
 
+  /**
+   * Auto imports
+   */
   imports: {
     dirs: ['stores/**/*']
   },
@@ -148,5 +161,6 @@ export default defineNuxtConfig({
     typedPages: true
   },
 
+  // https://github.com/nuxt/nuxt/pull/27512
   compatibilityDate: '2024-07-04'
 })

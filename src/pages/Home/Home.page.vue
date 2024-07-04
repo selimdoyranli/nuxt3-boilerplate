@@ -24,3 +24,5 @@ const navigation = ref<HomeNavigationTypes>({
   link: '/about'
 })
 </script>
+
+<style lang="scss" src="./Home.page.scss"></style>
