@@ -146,5 +146,7 @@ export default defineNuxtConfig({
    */
   experimental: {
     typedPages: true
-  }
+  },
+
+  compatibilityDate: '2024-07-04'
 })
