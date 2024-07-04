@@ -20,7 +20,7 @@
 
 ### Init Project Locally
 
-Install [Node.js >=18.0.0](https://nodejs.org/) and run the following command:
+Install [Node.js >=18.12.0](https://nodejs.org/) and run the following command:
 
 &nbsp;
 
